@@ -1,0 +1,9 @@
+DECLARE @DoB date = '19780715';
+DECLARE @now date = (SELECT GETDATE())
+
+SELECT DATEDIFF(month,@DoB,@now)
+
+SELECT 
+       DATENAME(WEEKDAY,DATEADD(DAY, 1, @DoB)) AS DayName,
+       DATEADD(DAY, 1, @DoB) AS DyDate
+
